@@ -11,7 +11,7 @@ defmodule TruLockApi.Mixfile do
   end
 
   def application do
-    [applications: [:logger, :cowboy, :plug, :httpoison],
+    [applications: [:logger, :cowboy, :plug, :httpoison, :tru_face],
      mod: {TruLockApi, []}]
   end
 
@@ -20,6 +20,7 @@ defmodule TruLockApi.Mixfile do
      {:plug, "~> 1.0"},
      {:poison, "~> 3.1"},
      {:httpoison, "~> 0.12"},
-     {:mem, "~> 0.3.1"}]
+     {:mem, "~> 0.3.1"},
+     {:tru_face, "~> 0.1.1"}]
   end
 end
