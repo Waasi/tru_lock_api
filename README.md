@@ -10,45 +10,13 @@ websites with face recognition authentication.
 
 `> make compile`
 
+`> export TRUE_FACE_API_KEY=<your_api_key>`
+
 # Running the Server
 
 `> make server`
 
 Server will be available at http://localhost:4000
-
-# Endpoints
-
-##### api/enroll
-
-- request example: `{email: email, entity_id: entity_id, image: image_binary}`
-
-- response examples:
-
-  Success: `{email: email, entity_id: entity_id, image_count: image_count}`
-
-  Failure: `{error: msg}`
-
-- response codes:
-
-  - `201`
-  - `422`
-
-##### api/authenticate
-
-- request example: `{email: email, entity_id: entity_id, image: image}`
-
-- response examples:
-
-  Success: `{email: email, entity_id: entity_id, image_count: image_count}`
-
-  Failure: `{error: msg}`
-
-- response codes:
-
-  - `200`
-  - `401`
-  - `403`
-  - `422`
 
 ## Contributing
 
