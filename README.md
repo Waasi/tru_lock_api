@@ -18,7 +18,13 @@ websites with face recognition authentication.
 
 Server will be available at http://localhost:4000
 
-## Contributing
+# Deployment to Heroku
+
+`> heroku create <your_app_name> --buildpack "https://github.com/HashNuke/heroku-buildpack-elixir.git"`
+
+`> git push heroku master`
+
+# Contributing
 
 1. Fork it (https://github.com/[my-github-username]/tru_lock_api/fork)
 2. Create your feature branch (`git checkout -b feature/my_new_feature`)
@@ -26,6 +32,6 @@ Server will be available at http://localhost:4000
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create a new Pull Request
 
-## Special Thanks To:
+# Special Thanks To:
 
 - @nchafni for all the support.
