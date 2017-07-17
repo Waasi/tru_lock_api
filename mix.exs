@@ -21,6 +21,6 @@ defmodule TruLockApi.Mixfile do
      {:poison, "~> 3.1"},
      {:httpoison, "~> 0.12"},
      {:mem, "~> 0.3.1"},
-     {:tru_face, "~> 0.1.1"}]
+     {:tru_face, "~> 0.1.2"}]
   end
 end

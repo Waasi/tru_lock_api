@@ -63,15 +63,16 @@ defmodule TruLockApi.Router do
          {:ok, %{email: email, entity_id: entity_id, image: image}} <- validation,
          {:ok, factor_one_auth} <-  Store.hget(entity_id, email),
          %{collection: _cid, enrollment: eid, image_count: img_count} <- factor_one_auth,
-         true <- img_count > 3,
+         true <- img_count >= 3,
          {:ok, avg_score} <- TruFace.Workers.Detective.match?(image, eid) do
+      IO.inspect(avg_score)
       cond do
-        avg_score >= 80 ->
+        avg_score >= 0.7 ->
           response =
             %{email: email, entity_id: entity_id, image_count: img_count}
             |> Poison.encode!()
           send_resp(conn, 200, response)
-        avg_score < 80 ->
+        avg_score < 0.7 ->
           response =
             %{error: "unable to authenticate"}
             |> Poison.encode!()
